@@ -1,0 +1,50 @@
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.2rem;
+}
+
+.social-sidebar .sidebar-line {
+  width: 1.5px;
+  height: 40px;
+  background: var(--nav-grey, #8b8b8b);
+  opacity: 0.5;
+  margin: 0 auto;
+}
+
+.social-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-sidebar li {
+  display: flex;
+}
+
+.social-sidebar a {
+  color: var(--nav-grey, #8b8b8b);
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.social-sidebar a:hover {
+  color: var(--clr-primary-a0, #bf63a4);
+}
+
+@media screen and (max-width: 700px) {
+  .social-sidebar {
+    display: none;
+  }
+} 
