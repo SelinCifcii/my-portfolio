@@ -5,6 +5,12 @@ import { translations } from "../data/translations";
 import "../styles/Skills.css";
 
 const skillsData = {
+  "Mobile Development": [
+    { name: "React Native", icon: <SiReact />, color: "#61dafb" },
+    { name: "Expo", icon: <SiExpo />, color: "#000" },
+    { name: "Swift", icon: <SiSwift />, color: "#f05138" },
+    { name: "Kotlin", icon: <SiKotlin />, color: "#7f52ff" },
+  ],
   "Frontend Development": [
     { name: "HTML5", icon: <FaHtml5 />, color: "#e34c26" },
     { name: "CSS3", icon: <FaCss3Alt />, color: "#264de4" },
@@ -14,17 +20,10 @@ const skillsData = {
     { name: "Next.js", icon: <SiNextdotjs />, color: "#fff" },
     { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38bdf8" },
   ],
-  "Backend & Database": [
-    { name: "Node.js", icon: <FaNodeJs />, color: "#3c873a" },
+  "Database": [
     { name: "MongoDB", icon: <SiMongodb />, color: "#00ed64" },
     { name: "MySQL", icon: <SiMysql />, color: "#00758f" },
     { name: "Firebase", icon: <SiFirebase />, color: "#ffca28" },
-  ],
-  "Mobile Development": [
-    { name: "React Native", icon: <SiReact />, color: "#61dafb" },
-    { name: "Expo", icon: <SiExpo />, color: "#000" },
-    { name: "Swift", icon: <SiSwift />, color: "#f05138" },
-    { name: "Kotlin", icon: <SiKotlin />, color: "#7f52ff" },
   ],
   "Tools & Platforms": [
     { name: "Docker", icon: <FaDocker />, color: "#2496ed" },

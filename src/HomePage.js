@@ -11,12 +11,20 @@ const HomePage = ({ showLogoTransition }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleNav = () =>{
-    setNav(!nav)
+    const newNavState = !nav;
+    setNav(newNavState);
+    
+    if (newNavState) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
   }
 
   const closeNav = () =>{
    if(nav){
-     setNav(false)
+     setNav(false);
+     document.body.style.overflow = 'unset';
    }
   }
 
@@ -46,6 +54,12 @@ const HomePage = ({ showLogoTransition }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollY]);
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return(
     <div  className='pages'>

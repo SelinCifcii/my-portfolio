@@ -25,7 +25,7 @@ export const translations = {
       subtitle: "Technologies and tools I work with",
       categories: {
         "Frontend Development": "Frontend Development",
-        "Backend & Database": "Backend & Database", 
+        "Database": "Database", 
         "Mobile Development": "Mobile Development",
         "Tools & Platforms": "Tools & Platforms"
       }
@@ -99,7 +99,7 @@ export const translations = {
       subtitle: "Çalıştığım teknolojiler ve araçlar",
       categories: {
         "Frontend Development": "Frontend Geliştirme",
-        "Backend & Database": "Backend & Veritabanı",
+        "Database": "Veritabanı",
         "Mobile Development": "Mobil Geliştirme", 
         "Tools & Platforms": "Araçlar & Platformlar"
       }

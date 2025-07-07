@@ -44,6 +44,10 @@ const ProjectDetail = () => {
     setSelectedImage(null);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // ESC tuşu ile modal kapatma
   React.useEffect(() => {
     const handleEscKey = (event) => {
