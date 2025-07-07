@@ -10,28 +10,28 @@ const Works = ({ language = 'tr' }) => {
       title: t.works.projects[0].title,
       description: t.works.projects[0].description,
       image: require('../images/teamManagementSystemPhoto.png'),
-      technologies: ['React', 'CSS3', 'JavaScript'],
+      technologies: ['React Native', 'TypeScript', 'Redux'],
       link: '#'
     },
     {
       title: t.works.projects[1].title,
       description: t.works.projects[1].description,
       image: require('../images/flowPassPhoto.png'),
-      technologies: ['React', 'LocalStorage', 'CSS3'],
+      technologies: ['React Native', 'Blockchain', 'WalletConnect'],
       link: '#'
     },
     {
       title: t.works.projects[2].title,
       description: t.works.projects[2].description,
       image: require('../images/routeaiPhoto.png'),
-      technologies: ['React Native', 'Expo', 'Firebase', 'Gemini AI', 'React Navigation'],
+      technologies: ['React Native', 'Firebase', 'Gemini AI'],
       link: '#'
     },
     {
       title: t.works.projects[3].title,
       description: t.works.projects[3].description,
       image: require('../images/mipsAssemblyPhoto.png'),
-      technologies: ['React', 'LocalStorage', 'CSS3'],
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       link: '#'
     }
   ];
