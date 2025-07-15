@@ -61,6 +61,18 @@ const HomePage = ({ showLogoTransition }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, []);
+
   return(
     <div  className='pages'>
         <SocialSidebar />

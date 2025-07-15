@@ -31,7 +31,7 @@ const ProjectDetail = () => {
         // URL'yi güncelle
         window.history.pushState(null, '', '/#works');
       }
-    }, 100);
+    }, 300); // Increased timeout for better reliability
   };
 
   const handleImageClick = (image) => {
@@ -45,7 +45,16 @@ const ProjectDetail = () => {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
     window.scrollTo(0, 0);
+    
+    // Ensure body overflow is restored
+    document.body.style.overflow = 'unset';
+    
+    return () => {
+      // Cleanup when component unmounts
+      document.body.style.overflow = 'unset';
+    };
   }, []);
 
   // ESC tuşu ile modal kapatma
@@ -180,7 +189,7 @@ const ProjectDetail = () => {
                     <img 
                       key={index} 
                       src={image} 
-                      alt={`${decodedTitle} - Image ${index + 1}`}
+                      alt={`${decodedTitle} - ${index + 1}`}
                       className="project-image"
                       onClick={() => handleImageClick(image)}
                     />
@@ -217,7 +226,7 @@ const ProjectDetail = () => {
         <div className="modal" onClick={closeModal}>
           <img 
             src={selectedImage} 
-            alt="Full Image"
+            alt="Full view"
             className="modal-image"
           />
         </div>

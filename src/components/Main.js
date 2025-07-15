@@ -9,8 +9,14 @@ import Achievements from '../screens/Achievements';
 import Footer from './Footer';
 
 const Main = ({nav, handleNav, closeNav, language}) => {
+  const handleMainClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeNav();
+    }
+  };
+
   return(
-    <div onClick={closeNav } className='main'>
+    <div onClick={handleMainClick} className='main'>
         <HeroSection nav={nav} handleNav={handleNav} language={language} />
         <About language={language} />
         <Skills language={language} />
