@@ -5,6 +5,20 @@ const Achievements = ({ language }) => {
   const achievements = [
     {
       title: {
+        tr: 'Cursor Hackathon 1.liği',
+        en: '1st Place at Cursor Hackathon'
+      },
+      description: {
+        tr: 'Eğitim kategorisinde geliştirdiğimiz web uygulamasıyla 1. olduk. Uygulamamız; pomodoro gibi ders çalışma tekniklerini, öğrencileri eşleştiren bir sistemle birleştirerek birlikte çalışmayı teşvik eden ve dakikalık oturumlar başlatılmasını sağlayan bir yapı sunmaktadır.',
+        en: 'We won 1st place in the education category with our web application. The platform combines study techniques such as Pomodoro with a student matching system to encourage collaborative studying and enables the creation of timed study sessions.'
+      },
+      image: require('../images/achievementsPhoto/cursor_hackathon.jpeg'),
+      badge: '🥇 1st Place',
+      date: '2025',
+      path: null
+    },
+    {
+      title: {
         tr: 'Teknofest Finalistliği',
         en: 'Hackathon First Place'
       },
@@ -83,13 +97,13 @@ const Achievements = ({ language }) => {
         <div className="achievements-content">
           <div className="achievements-grid">
             {achievements.map((achievement, index) => (
-              <AchievementCard 
-                key={index} 
+              <AchievementCard
+                key={index}
                 data={{
                   ...achievement,
                   title: achievement.title[language],
                   description: achievement.description[language]
-                }} 
+                }}
               />
             ))}
           </div>

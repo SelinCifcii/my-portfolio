@@ -5,9 +5,32 @@ const Experience = ({ language }) => {
   const experiences = [
     {
       title: language === 'tr' ? 'Mobil Uygulama Geliştirici' : 'Mobile Application Developer',
+      company: language === 'tr' ? 'LÖSEV - Lösemili Çocuklar Vakfı' : 'LÖSEV - Foundation for Children with Leukemia',
+      url: 'https://www.losev.org.tr/',
+      range: language === 'tr'
+        ? 'Eylül 2025 - Devam Ediyor - Ankara TÜRKİYE'
+        : 'Sep 2025 - Present - Ankara TURKEY',
+      description: language === 'tr' ? [
+        'Flutter kullanarak LÖSANTE Hastanesi için mobil uygulama geliştirme süreçlerinde aktif rol aldım',
+        'Kullanıcı deneyimini iyileştirmeye yönelik arayüzler geliştirerek hasta ve kurum ihtiyaçlarına uygun çözümler ürettim',
+        'Kurum içi operasyonları destekleyen ve verimliliği artıran mobil uygulamalar geliştirdim',
+        'REST API entegrasyonları, state management ve performans optimizasyonu konularında deneyim kazandım',
+        'Uygulama yayınlama, sürüm yönetimi ve test süreçlerini yönettim',
+        'https://play.google.com/store/apps/details?id=com.losev.losante_hastanesi_mobile'
+      ] : [
+        'Actively contributed to the development of a mobile application for LÖSANTE Hospital using Flutter',
+        'Developed user-focused interfaces to improve user experience and meet both patient and organizational needs',
+        'Built internal mobile applications that enhance operational efficiency within the organization',
+        'Gained experience in REST API integrations, state management, and performance optimization',
+        'Managed application publishing, versioning, and testing processes',
+        'https://play.google.com/store/apps/details?id=com.losev.losante_hastanesi_mobile'
+      ]
+    },
+    {
+      title: language === 'tr' ? 'Mobil Uygulama Geliştirici' : 'Mobile Application Developer',
       company: language === 'tr' ? 'KAPSÜL Teknoloji Platformu' : 'KAPSUL Technology',
       url: 'https://www.kapsul.org.tr/',
-      range: language === 'tr' ? 'Ocak 2024 - Halen Devam Ediyor - Konya TÜRKİYE' : 'Jan 2024 - Present - Konya TURKEY',
+      range: language === 'tr' ? 'Ocak 2024 - Eylül 2025- Konya TÜRKİYE' : 'Jan 2024 - Sep 2025 - Konya TURKEY',
       description: language === 'tr' ? [
         'React Native, Expo SDK ve TypeScript kullanarak kurumsal seviyede mobil uygulama geliştirdim, çoklu kullanıcı türleri için rol tabanlı erişim kontrolü uyguladım',
         'Redux Toolkit ve Redux Persist kullanarak ölçeklenebilir state yönetimi çözümü tasarladım, 20+ ekran ve 30+ API entegrasyonu arasında karmaşık uygulama durumunu yönettim',
@@ -133,8 +156,8 @@ const Experience = ({ language }) => {
               </button>
             );
           })}
-          <div 
-            className="experience-highlight" 
+          <div
+            className="experience-highlight"
             style={{ '--active-tab-id': activeTabId }}
           />
         </div>
@@ -173,7 +196,7 @@ const Experience = ({ language }) => {
                       if (urlMatch) {
                         const url = urlMatch[1];
                         const text = item.replace(url, '').trim();
-                        
+
                         // Check if it's a store link and create appropriate link text
                         let linkText = url;
                         if (url.includes('play.google.com')) {
@@ -181,7 +204,7 @@ const Experience = ({ language }) => {
                         } else if (url.includes('apps.apple.com')) {
                           linkText = 'App Store';
                         }
-                        
+
                         return (
                           <li key={index}>
                             {text} <a href={url} target="_blank" rel="noopener noreferrer">{linkText} ↗</a>
