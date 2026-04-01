@@ -38,12 +38,12 @@ const NavLinks = ({ nav, handleNav, language }) => {
           </svg>
         </span>
       </a>
-      <a onClick={() => scrollToSection('about')} style={{ cursor: 'pointer' }}>{t.nav.about}</a>
-      <a onClick={() => scrollToSection('skills')} style={{ cursor: 'pointer' }}>{t.nav.skills}</a>
-      <a onClick={() => scrollToSection('experience')} style={{ cursor: 'pointer' }}>{t.nav.experience}</a>
-      <a onClick={() => scrollToSection('works')} style={{ cursor: 'pointer' }}>{t.nav.projects}</a>
-      <a onClick={() => scrollToSection('achievements')} style={{ cursor: 'pointer' }}>{t.nav.achievements}</a>
-      <a onClick={() => scrollToSection('contact')} style={{ cursor: 'pointer' }}>{t.nav.contact}</a>
+      <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} style={{ cursor: 'pointer' }}>{t.nav.about}</a>
+      <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }} style={{ cursor: 'pointer' }}>{t.nav.skills}</a>
+      <a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }} style={{ cursor: 'pointer' }}>{t.nav.experience}</a>
+      <a href="#works" onClick={(e) => { e.preventDefault(); scrollToSection('works'); }} style={{ cursor: 'pointer' }}>{t.nav.projects}</a>
+      <a href="#achievements" onClick={(e) => { e.preventDefault(); scrollToSection('achievements'); }} style={{ cursor: 'pointer' }}>{t.nav.achievements}</a>
+      <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} style={{ cursor: 'pointer' }}>{t.nav.contact}</a>
       <div className="nav-footer">
         <p>&copy; 2024 Designed & Built by <a href="https://github.com/SelinCifcii" target="_blank" rel="noopener noreferrer" className="nav-footer-link">Selin Çifci</a></p>
       </div>

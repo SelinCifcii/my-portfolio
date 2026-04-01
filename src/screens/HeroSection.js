@@ -1,28 +1,12 @@
 import React, { useState } from "react";
 import "../styles/HeroSection.css";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { BiDownload } from "react-icons/bi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { animateScroll as scroll } from "react-scroll";
 import { motion } from "framer-motion";
-import { translations } from "../data/translations";
-// import CV from "../data/Peace Jinadu-Paul Resume.pdf";
-import MyPhoto from "../images/MyPhoto.jpeg";
-import ProfilePhotos from '../components/ProfilePhotos';
 
-const HeroSection = ({ nav, handleNav, language }) => {
-	const t = translations[language] || translations.tr;
-	
+const HeroSection = ({ language }) => {
 	const scrollToTop = () => {
 		scroll.scrollToTop({ smooth: "linear" });
-	};
-
-	const scrollToWorks = () => {
-		scroll.scrollTo(document.getElementById('works').offsetTop - 80, { smooth: "linear" });
-	};
-
-	const scrollToContact = () => {
-		scroll.scrollTo(document.getElementById('contact').offsetTop - 80, { smooth: "linear" });
 	};
 
 	const [visible, setVisible] = useState(false);
@@ -46,20 +30,6 @@ const HeroSection = ({ nav, handleNav, language }) => {
 		visible: {
 			opacity: 1,
 			y: 0,
-			transition: {
-				duration: 1.4,
-			},
-		},
-	};
-
-	const contactVariants = {
-		hidden: {
-			opacity: 0,
-			x: "-50%",
-		},
-		visible: {
-			opacity: 1,
-			x: 0,
 			transition: {
 				duration: 1.4,
 			},

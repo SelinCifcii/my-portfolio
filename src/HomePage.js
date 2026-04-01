@@ -85,9 +85,7 @@ const HomePage = ({ showLogoTransition }) => {
           showLogoTransition={showLogoTransition}
         />
         <Main 
-          nav={nav} 
           closeNav={closeNav} 
-          handleNav={handleNav}
           language={language}
         />
     </div>
