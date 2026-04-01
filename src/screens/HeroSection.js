@@ -66,23 +66,6 @@ const HeroSection = ({ nav, handleNav, language }) => {
 		},
 	};
 
-	const photoVariants = {
-		hidden: {
-			opacity: 0,
-			x: "-30%",
-			scale: 0.8,
-		},
-		visible: {
-			opacity: 1,
-			x: 0,
-			scale: 1,
-			transition: {
-				duration: 1.8,
-				ease: "easeOut",
-			},
-		},
-	};
-
 	return (
 		<div className='hero-section' name='home' id='home'>
 			<div className='hero-overlay'></div>

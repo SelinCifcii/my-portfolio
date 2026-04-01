@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGithub, FaFigma } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaDocker, FaGithub, FaFigma } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiMysql, SiReact, SiExpo, SiSwift, SiKotlin, SiPostman, SiJira, SiJavascript, SiTypescript, SiFirebase, SiVercel } from "react-icons/si";
 import { translations } from "../data/translations";
 import "../styles/Skills.css";
