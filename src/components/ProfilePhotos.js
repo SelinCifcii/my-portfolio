@@ -3,6 +3,7 @@ import './ProfilePhotos.css';
 import profileMe from '../images/profile_me.jpeg';
 import profileMe2 from '../images/profile_me_2.jpeg';
 
+//deneme
 const ProfilePhotos = () => (
   <div className="profile-photos">
     <img src={profileMe2} alt="Profile 2" className="photo photo-back" />
